@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="House" representedClassName="House" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="own" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="house" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName=".Person" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="house" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="House" inverseName="own" inverseEntity="House" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-27" positionY="18" width="128" height="88"/>
+        <element name="House" positionX="270.9609375" positionY="274.0703125" width="128" height="73"/>
+    </elements>
+</model>
