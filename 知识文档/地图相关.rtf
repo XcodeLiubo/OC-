@@ -1,0 +1,478 @@
+{\rtf1\ansi\ansicpg936\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset134 PingFangSC-Semibold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww27320\viewh13580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \
+\
+CoreLocation ios\'b6\'a8\'ce\'bb\'bf\'f2\'bc\'dc\
+\
+\'b9\'a6\'c4\'dc:\
+> \'b5\'d8\'c0\'ed\'b6\'a8\'ce\'bb: \'bb\'f1\'c8\'a1\'d3\'c3\'bb\'a7\'cb\'f9\'d4\'da\'ce\'bb\'d6\'c3, \'be\'ad\'ce\'b3\'b6\'c8,\'ba\'a3\'b1\'a8\'b5\'c8\'d0\'c5\'cf\'a2\
+> \'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb: \'b8\'f9\'be\'dd\'ce\'bb\'d6\'c3\'c3\'fb\'b3\'c6 \'b2\'e9\'d5\'d2\'b5\'bd\'be\'ad\'ce\'b3\'b6\'c8\
+> \'b7\'b5\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb: \'b8\'f9\'be\'dd\'be\'ad\'ce\'b3\'b6\'c8 \'b2\'e9\'d5\'d2\'be\'df\'cc\'e5\'ce\'bb\'d6\'c3\
+> \'c7\'f8\'d3\'f2\'bc\'e0\'cc\'fd: \'cd\'a8\'b9\'fd\'d6\'b8\'b6\'a8\'b5\'c4\'d2\'bb\'b8\'f6\'c7\'f8\'d3\'f2, \'d3\'c3\'bb\'a7\'bd\'f8\'c8\'eb\'bb\'f2\'d5\'df\'c0\'eb\'bf\'aa\'d5\'e2\'b8\'f6\'c7\'f8\'d3\'f2\'ba\'f3,\'b6\'bc\'bf\'c9\'d2\'d4\'bc\'e0\'cc\'fd\'b5\'bd\
+\
+\
+\'d3\'a6\'d3\'c3\'b3\'a1\'be\'b0\
+> \'d6\'dc\'b1\'df\'b2\'e9\'d5\'d2(\'b2\'de\'cb\'f9,\'bc\'d3\'d3\'cd\'d5\'be,ktv,\'b5\'e7\'d3\'b0\'d4\'ba, \'b2\'cd\'b9\'dd\'b5\'c8)\
+> \'b5\'bc\'ba\'bd \'c9\'e8\'d6\'c3\'c6\'f0\'b5\'e3\'d6\'d5\'b5\'e3, \'c2\'b7\'cf\'df\'b9\'e6\'bb\'ae\'d2\'fd\'b5\'bc(\'b5\'d8\'cd\'bc\'c0\'e0APP)\
+\
+\
+\'c8\'c8\'c3\'c5\'d7\'a8\'d2\'b5\'ca\'f5\'d3\'ef\
+>LBS (Location Based Service): \'bb\'f9\'d3\'da\'ce\'bb\'d6\'c3\'b5\'c4\'b7\'fe\'ce\'f1\
+>SoLoMo(Social Local Mobile)\
+	\'c9\'e7\'bd\'bb\'bb\'af: app\'c0\'ef\'bc\'d3\'c8\'eb\'d2\'bb\'d0\'a9\'c9\'e7\'bd\'bb\'d4\'aa\'cb\'d8\
+	\'b1\'be\'b5\'d8\'bb\'af: \'bb\'f9\'d3\'daLBS\'b5\'c4\'d6\'dc\'b1\'df\'cb\'d1\'cb\'f7, \'d6\'dc\'b1\'df\'c7\'a9\'b5\'bd\'b7\'fe\'ce\'f1\
+	\'d2\'c6\'b6\'af\'bb\'af:\'d2\'c6\'b6\'af\'cd\'f8, \'d2\'c6\'b6\'afAPP\
+\
+\
+\
+\'ca\'b9\'d3\'c3\'b2\'bd\'d6\'e8\
+>\'b5\'bc\'c8\'eb\'d6\'f7\'cd\'b7\'ce\'c4\'bc\'fe CoreLocation/CoreLocation.h\
+\
+\
+\
+\
+\'bf\'aa\'c6\'f4\'b6\'a8\'ce\'bb\
+\'c7\'b0\'cc\'a8\'b6\'a8\'ce\'bb\
+\
+>iOS8 \'d6\'ae\'c7\'b0\
+	1 \'b5\'bc\'c8\'eb\'bf\'f2\'bc\'dc\'ba\'cd\'cd\'b7\'ce\'c4\'bc\'fe\
+\
+	2 \'d0\'de\'b8\'c4info.plist\'b5\'c4\'c5\'e4\'d6\'c3 Privacy - Location Usage Description\'cb\'b5\'c3\'f7\'b6\'a8\'ce\'bb\'c4\'bf\'b5\'c4\
+\
+	2 \'b4\'b4\'bd\'a8CLLocationManager\'b6\'d4\'cf\'f3,\'c9\'e8\'d6\'c3\'b4\'fa\'c0\'ed, \'c9\'e8\'d6\'c3\'be\'ab\'b6\'c8\'b5\'c8\'b8\'f7\'d6\'d6\'ca\'f4\'d0\'d4\
+		self.location = [CLLocation new];\
+		self.location.delegate = self;\
+		\
+\
+	3 \'bf\'aa\'ca\'bc\'b6\'a8\'ce\'bb [self.location startUpdatingLocation]\
+\
+	4 \'d7\'f1\'d1\'ad\'b4\'fa\'c0\'ed \'ca\'b5\'cf\'d6\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8 \'d4\'da\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8\'d6\'d0\'bb\'f1\'c8\'a1\'be\'ad\'ce\'b3\'b6\'c8\
+		locationManager:didUpdataLocations\
+\
+	5\'d4\'da\'ba\'cf\'ca\'ca\'b5\'c4\'ca\'b1\'ba\'f2\'b9\'d8\'b1\'d5\
+		[self.location stopUpdatingLocation]\
+\
+\
+\
+>iOS8 \'d6\'ae\'ba\'f3\
+	\'ba\'cd8\'d6\'ae\'c7\'b0\'b5\'c4\'b6\'a8\'ce\'bb\'b2\'bd\'d6\'e8\'b2\'ee\'b2\'bb\'b6\'e0\
+		\'d2\'aa\'d4\'dainpo.plist\'c0\'ef\'c5\'e4\'d6\'c3 key:NSLocationWhenInUsageDescription\
+		\'d2\'aa\'ca\'d6\'b6\'af\'c7\'eb\'c7\'f3\'c7\'b0\'cc\'a8\'b6\'a8\'ce\'bb\'ca\'da\'c8\'a8\
+			[self.location requestWhenInUseAuthorization];\
+			[self.location startUpdatingLocation]; \
+			\'a1\'ad.\
+\
+\
+\
+\
+\
+\
+\'ba\'f3\'cc\'a8\'b6\'a8\'ce\'bb\
+\
+>iOS8 \'d6\'ae\'c7\'b0\
+	\'d4\'da\'c7\'b0\'cc\'a8\'b6\'a8\'ce\'bb\'b5\'c4\'bb\'f9\'b4\'a1\'c9\'cf \'b9\'b4\'d1\'a1\'ba\'f3\'cc\'a8\'c4\'a3\'ca\'bd\
+\
+>iOS8 \'d6\'ae\'ba\'f3	\
+	\'b7\'bd\'b0\'b81 \
+	\'d4\'da\'c7\'b0\'cc\'a8\'b6\'a8\'ce\'bb\'b5\'c4\'bb\'f9\'b4\'a1\'c9\'cf \'b9\'b4\'d1\'a1\'ba\'f3\'cc\'a8\'c4\'a3\'ca\'bd \'c8\'e7\'b9\'fb\'bd\'f6\'bd\'f6\'d5\'e2\'d1\'f9 app\'cd\'cb\'b5\'bd\'ba\'f3\'cc\'a8 , \'b6\'a5\'b2\'bf\'bb\'e1\'d3\'d0\'c0\'b6\'cc\'f5,\'b2\'bb\'b6\'cf\'cc\'e1\'d0\'d1\'d3\'c3\'bb\'a7\
+	\
+	\'b7\'bd\'b0\'b82 \
+	\'d4\'dainfo.plist\'d6\'d0\'c5\'e4\'d6\'c3 key:NSLoactionAlwaysUsageDescription\
+	[self.location requestAlwaysAuthorization];\
+	\'d5\'e2\'d1\'f9\'b5\'c4\'d0\'a7\'b9\'fb\'b2\'bb\'b9\'dc\'d3\'d0\'c3\'bb\'d3\'d0\'b9\'b4\'d1\'a1\'ba\'f3\'cc\'a8\'c4\'a3\'ca\'bd, app\'cd\'cb\'b5\'bd\'ba\'f3\'cc\'a8 \'b6\'bc\'b2\'bb\'bb\'e1\'d3\'d0\'c0\'b6\'cc\'f5\'cc\'e1\'ca\'be\
+\
+\
+\
+> iOS9 \'d6\'ae\'ba\'f3\'b5\'c4\'b6\'a8\'ce\'bb\
+	\'c7\'b0\'cc\'a8\'b6\'a8\'ce\'bb\'ba\'cd iOS8 \'d6\'ae\'ba\'f3\'b5\'c4\'d2\'bb\'d6\'c2, \'c3\'bb\'d3\'d0\'b1\'e4\'bb\'af\
+	\
+	\'ba\'f3\'cc\'a8\'b6\'a8\'ce\'bb\
+	\'b7\'bd\'b0\'b81 \'ba\'cdiOS8\'d6\'ae\'ba\'f3\'ba\'f3\'cc\'a8\'b6\'a8\'ce\'bb\'b7\'bd\'b0\'b81\'d2\'bb\'d1\'f9, \'b5\'ab\'ca\'c7\'d2\'aa\'c9\'e8\'d6\'c3self.location.allowsBackgroudLocationUpdates = ture\
+\
+	\'b7\'bd\'b0\'b82 \'ba\'cdiOS8 \'d6\'ae\'ba\'f3\'ba\'f3\'cc\'a8\'b6\'a8\'ce\'bb\'b7\'bd\'b0\'b82\'d2\'bb\'d1\'f9\
+\
+\
+\
+\
+\
+\'b6\'a8\'ce\'bb\'b5\'c4\'b6\'ee\'cd\'e2\'b2\'ce\'ca\'fd\'c9\'e8\'d6\'c3\
+	> distanceFilter \'c3\'bf\'b6\'e0\'c9\'d9\'c3\'d7\'b6\'a8\'ce\'bb\'d2\'bb\'b4\'ce\
+	> desiredAccuracy \'b6\'a8\'ce\'bb\'be\'ab\'b6\'c8 (\'b5\'bc\'ba\'bd/\'be\'ab\'b6\'c8\'d7\'ee\'ba\'c3/\'b8\'bd\'bd\'fc10\'c3\'d7/\'b8\'bd\'bd\'fc100\'c3\'d7/\'b8\'bd\'bd\'fc1000\'c3\'d7/\'b8\'bd\'bd\'fc3000\'c3\'d7)\
+\
+\
+\
+\
+\
+\
+\'d7\'a2\'d2\'e2\'b5\'c4\'b5\'d8\'b7\'bd\
+	\'d4\'da\'b3\'f5\'ca\'bc\'bb\'af\'bf\'aa\'ca\'bc\'b6\'a8\'ce\'bb\'b5\'c4\'ca\'b1\'ba\'f2\
+		>\'d2\'aa\'c5\'d0\'b6\'cf\'d3\'c3\'bb\'a7\'b5\'c4\'ca\'da\'c8\'a8\'d7\'b4\'cc\'ac\
+		self.location.authorizationStatus,\'c8\'e7\'b9\'fb\'d7\'b4\'cc\'ac\'ca\'c7\'c3\'bb\'d3\'d0\'ca\'da\'c8\'a8\\\'ca\'da\'c8\'a8\'be\'dc\'be\'f8,\'d2\'aa\'cc\'e1\'d0\'d1\'d3\'c3\'bb\'a7\'ca\'da\'c8\'a8, \'b2\'bb\'bf\'aa\'c6\'f4\'b6\'a8\'ce\'bb\
+\
+		>\'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'cd\'f8\'c2\'e7\
+		\'cc\'e1\'d0\'d1\'d3\'c3\'bb\'a7\'c3\'bb\'d3\'d0\'cd\'f8\'c2\'e7, \'b4\'f2\'bf\'aa\'cd\'f8\'c2\'e7\
+	\
+\
+\
+\
+\
+\'b6\'a8\'ce\'bb\'b9\'fd\'b3\'cc\'d6\'d0\
+> \'bc\'e0\'cc\'fd\'cd\'f8\'c2\'e7\'d7\'b4\'cc\'ac\
+	\'c8\'e7\'b9\'fb\'cd\'f8\'c2\'e7\'c3\'bb\'d3\'d0\'c1\'cb, \'cc\'e1\'ca\'be\'c3\'bb\'cd\'f8, \'b9\'d8\'b1\'d5\'b6\'a8\'ce\'bb\'b7\'fe\'ce\'f1, \'b8\'f8\'d2\'bb\'b8\'f6\'b1\'ea\'bc\'c7\'b1\'ea\'bc\'c7\'d5\'e2\'d2\'bb\'b4\'ce\'b6\'a8\'ce\'bb\'cd\'f8\'c2\'e7\'d6\'d0\'b6\'cf\'c1\'cb\
+	\'c8\'e7\'b9\'fb\'cd\'f8\'c2\'e7\'b4\'d3\'c3\'bb\'d3\'d0\'b5\'bd\'d3\'d2, \'cf\'c8\'bf\'b4\'cf\'c2\'b1\'ea\'bc\'c7, \'c8\'e7\'b9\'fb\'b1\'ea\'bc\'c7\'ca\'c7\'b6\'a8\'ce\'bb\'cd\'f8\'c2\'e7\'d6\'d0\'b6\'cf\'c1\'cb, \'bf\'aa\'c6\'f4\'b6\'a8\'ce\'bb, \'b7\'f1\'d4\'f2\'b2\'bb\'bf\'aa\'c6\'f4\'b6\'a8\'ce\'bb\
+\
+>\'bc\'e0\'cc\'fd\'d3\'c3\'bb\'a7\'ca\'da\'c8\'a8\'d7\'b4\'cc\'ac\
+	\'cd\'a8\'b9\'fd\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8\'c4\'dc\'bc\'e0\'cc\'fd\'b5\'bd \'ca\'da\'c8\'a8\'d7\'b4\'cc\'ac\'b5\'c4\'b8\'c4\'b1\'e4\
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+\cf0 	- (void)locationManager: didChangeAuthorizationStatus:\
+	\'c8\'e7\'b9\'fb\'ca\'da\'c8\'a8\'d7\'b4\'cc\'ac\'b7\'a2\'c9\'fa, \'ca\'da\'c8\'a8\'be\'dc\'be\'f8\'c1\'cb, \'c4\'c7\'c3\'b4\'d2\'aa\'b9\'d8\'b1\'d5\'b6\'a8\'ce\'bb\
+\
+\
+\
+\
+\
+\'b1\'ea\'d7\'bc\'b6\'a8\'ce\'bb\'b7\'fe\'ce\'f1\
+> \'b6\'a8\'ce\'bb\'ca\'b5\'cf\'d6\'b7\'bd\'b0\'b8 GPS/\'c0\'b6\'d1\'c0/WiFi/\'bb\'f9\'d5\'be \'be\'df\'cc\'e5\'ca\'b9\'d3\'c3\'c4\'c4\'d6\'d6, \'c6\'bb\'b9\'fb\'d3\'d0\'d7\'d4\'bc\'ba\'b5\'c4\'b9\'e6\'d4\'f2\
+> \'d3\'c5\'b5\'e3: \'b6\'a8\'ce\'bb\'be\'ab\'b6\'c8\'b8\'df\
+> \'c8\'b1\'b5\'e3: \'ba\'c4\'b5\'e7, \'b3\'cc\'d0\'f2\'b9\'d8\'b1\'d5, \'c3\'bb\'b7\'a8\'bb\'f1\'c8\'a1\'ce\'bb\'d6\'c3\
+\
+\
+\'cf\'d4\'d6\'f8\'ce\'bb\'d6\'c3\'b1\'e4\'bb\'af\'b6\'a8\'ce\'bb\'b7\'fe\'ce\'f1\
+> \'bb\'f9\'d5\'be\'b6\'a8\'ce\'bb, \'b1\'d8\'d0\'eb\'d2\'aa\'c7\'f3\'c9\'e8\'b1\'b8\'d3\'d0\'b5\'e7\'bb\'b0\'c4\'a3\'bf\'e9\
+> \'d3\'c5\'b5\'e3: app\'bc\'b4\'ca\'b9\'b9\'d8\'b1\'d5, \'d2\'b2\'bf\'c9\'d2\'d4\'ca\'d5\'b5\'bd\'ce\'bb\'d6\'c3\'d0\'c5\'cf\'a2\'cd\'a8\'d6\'aa, \'b2\'a2\'c8\'c3app\'bd\'f8\'c8\'eb\'b5\'bd\'ba\'f3\'cc\'a8\'b4\'a6\'c0\'ed\
+> \'c8\'b1\'b5\'e3: \'b6\'a8\'ce\'bb\'be\'ab\'b6\'c8\'b5\'cd\
+\
+\
+\'d4\'f5\'c3\'b4\'d1\'a1\'d4\'f1\
+	\'c8\'e7\'b9\'fb\'d2\'aa\'c7\'f3\'b6\'a8\'ce\'bb\'bc\'b0\'ca\'b1, \'be\'ab\'b6\'c8\'b8\'df, \'b2\'a2\'c7\'d2\'d4\'cb\'d0\'d0\'ca\'b1\'bc\'e4\'b6\'cc, \'ca\'b9\'d3\'c3\'b1\'ea\'d7\'bc\'b6\'a8\'ce\'bb\
+	\'c8\'e7\'b9\'fb\'b3\'a4\'ca\'b1\'bc\'e4\'bc\'e0\'bf\'d8\'d3\'c3\'bb\'a7\'ce\'bb\'d6\'c3, \'d3\'c3\'bb\'a7\'d2\'c6\'b6\'af\'cb\'d9\'b6\'c8\'b1\'c8\'bd\'cf\'bf\'ec(\'b4\'f2\'b3\'b5), \'bf\'c9\'ca\'b9\'d3\'c3\'bb\'f9\'d5\'be\'b6\'a8\'ce\'bb\
+\
+\
+\'d2\'bb\'b4\'ce\'d0\'d4\'b6\'a8\'ce\'bb\
+	[self.location requestLocation];\
+	\'b1\'d8\'d0\'eb\'ca\'b5\'cf\'d6\'b4\'fa\'c0\'ed\'b5\'c4locationManager:didFailWithError:\
+	\'b2\'bb\'c4\'dc\'d3\'ebstartUpdatingLocation\'cd\'ac\'ca\'b1\'ca\'b9\'d3\'c3\
+\
+\
+\
+\
+\
+CLLocation\'b6\'d4\'cf\'f3 \'d5\'e2\'c0\'ef\'c3\'e6\'b3\'f6\'cf\'d6\'b5\'c4location\'b6\'d4\'cf\'f3\'b2\'bb\'ca\'c7\'c9\'cf\'c3\'e6\'b5\'c4, \'c9\'cf\'c3\'e6\'b5\'c4\'ca\'c7CLMgr\
+> coordinate \'be\'ad\'ce\'b3\'b6\'c8\'ca\'fd\'be\'dd\
+> altitude \'ba\'a3\'b0\'ce\
+> speed \'cb\'d9\'b6\'c8\
+> course \'ba\'bd\'cf\'f2(\'c9\'e8\'b1\'b8\'b5\'c4\'d2\'c6\'b6\'af\'b7\'bd\'cf\'f2, 0.0 ~ 359.9 \'d5\'fd\'b1\'b1\'b7\'bd0.0)\
+> distanceFromLocation:otherLocation \'bc\'c6\'cb\'e32\'b8\'f6\'b5\'d8\'c7\'f8\'b5\'c4\'be\'e0\'c0\'eb\'b5\'a5\'ce\'bb\'ca\'c7m\
+> \'ca\'b9\'d3\'c3\'c7\'b0\'b1\'d8\'d0\'eb\'c5\'d0\'b6\'cf\'ca\'fd\'be\'dd\'ca\'c7\'b7\'f1\'d3\'d0\'d0\'a7 location.horizatalAccuracy < 0 \'b2\'bb\'ba\'cf\'b7\'a8\
+\
+\
+\
+\
+\'d6\'b8\'c4\'cf\'d5\'eb\'d0\'a7\'b9\'fb\
+\'d4\'ad\'c0\'ed \'c0\'fb\'d3\'c3\'b4\'c5\'c1\'a6\'bc\'c6\'bb\'f1\'c8\'a1\'c9\'e8\'b1\'b8\'b3\'af\'cf\'f2, \'b8\'f9\'be\'dd\'c9\'e8\'b1\'b8\'b3\'af\'cf\'f2, \'b7\'b4\'cf\'f2\'d1\'a1\'d4\'f1 \'d6\'b8\'c4\'cf\'d5\'eb\'cd\'bc\'c6\'ac\
+\
+\'b4\'fa\'c2\'eb\'ca\'b5\'cf\'d6\
+	>\'b5\'bc\'c8\'ebCL\'cd\'b7\'ce\'c4\'bc\'fe\
+	>\'b4\'b4\'bd\'a8CLMgr\'b6\'d4\'cf\'f3 location\
+	>\'bb\'f1\'c8\'a1\'c9\'e8\'b1\'b8\'b5\'c4\'cd\'b7 [self.location startUpdatingHeading];\
+	>\'d4\'da\'b6\'d4\'d3\'a6\'b5\'c4\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8 locationManager:didUpdateHeading:\'d6\'d0(\'bb\'e1\'b4\'ab\'c8\'eb\'d2\'bb\'b8\'f6 CLHeading* newHeading)\
+		1 \'c5\'d0\'b6\'cf\'b5\'b1\'c7\'b0\'b5\'c4\'bd\'c7\'b6\'c8(newHeading.headingAccuracy\'ca\'c7\'b7\'f1\'d3\'d0\'d0\'a7 <0 \'ce\'de\'d0\'a7)\
+		2 \'bb\'f1\'c8\'a1\'c9\'e8\'b1\'b8\'b3\'af\'cf\'f2(\'cf\'e0\'b6\'d4\'d3\'da \'b4\'c5\'b1\'b1\'b7\'bd\'cf\'f2) \
+			angle = newHeading.magneticHeading / 180.0 * \'a6\'d0\
+		3 imageView.transform = CGAffineTransformMakeRotation(-angle)\
+\
+\
+\
+\
+\
+\
+\'c7\'f8\'d3\'f2\'bc\'e0\'cc\'fd(\'bd\'f8\'c8\'eb\'ba\'cd\'c0\'eb\'bf\'aa)\
+	> \'b5\'bc\'c8\'ebCL\'cd\'b7\'ce\'c4\'bc\'fe\
+	> \'b4\'b4\'bd\'a8CLMgr \'b6\'d4\'cf\'f3self.location, \'b2\'a2\'c9\'e8\'d6\'c3\'b4\'fa\'c0\'ed\
+	> \'c7\'eb\'c7\'f3\'c7\'b0\'ba\'f3\'cc\'a8\'b6\'a8\'ce\'bb(\'bf\'b4\'c9\'cf\'c3\'e6 ios\'b8\'f7\'b0\'e6\'b1\'be\'b7\'bd\'b0\'b8)\
+	> \'b4\'b4\'bd\'a8\'c7\'f8\'d3\'f2\
+		1 \'b4\'b4\'bd\'a8\'c7\'f8\'d3\'f2\'d6\'d0\'d0\'c4: CLLocationCoordinate2D center = \'be\'ad\'ce\'b3\'b6\'c8\'d7\'f8\'b1\'ea\'bd\'e1\'b9\'b9\
+		2 \'d2\'d4\'d5\'e2\'b8\'f6\'b5\'e3\'d6\'b8\'b6\'a8 \'c7\'f8\'d3\'f2\'b0\'eb\'be\'b6\
+		3 \'b4\'b4\'bd\'a8\'c7\'f8\'d3\'f2\'b6\'d4\'cf\'f3(CLCircularRegion*)\
+		4 \'bf\'aa\'ca\'bc\'bc\'e0\'cc\'fd\'c7\'f8\'d3\'f2 [self.location startMonitoringForRegion:\'c7\'f8\'d3\'f2\'b6\'d4\'cf\'f3];\
+		5 \'d4\'da\'b6\'d4\'d3\'a6\'b5\'c4\'b4\'fa\'c0\'ed\'c8\'a5\'bc\'e0\'cc\'fd\
+			>\'bd\'f8\'c8\'eb\'c7\'f8\'d3\'f2 locationManager:didEnterRegion\
+			>\'c0\'eb\'bf\'aa\'c7\'f8\'d3\'f2 locationManager:didExitRegion\
+\
+\
+\
+\'c7\'f8\'d3\'f2\'bc\'e0\'cc\'fd\'d7\'b4\'cc\'ac\
+\'c9\'cf\'c3\'e6\'bd\'f8\'c8\'eb\'c0\'eb\'bf\'aa\'ca\'c7\'d2\'bb\'b8\'f6\'b6\'af\'d7\'f7, \'d2\'aa\'cf\'eb\'d6\'aa\'b5\'c0\'c4\'b3\'d2\'bb\'b8\'f6\'c7\'f8\'d3\'f2\'b5\'c4\'d7\'b4\'cc\'ac(\'bc\'b4 \'d4\'f5\'c3\'b4\'c5\'d0\'b6\'cf\'ce\'d2\'b5\'b1\'c7\'b0\'b5\'c4\'ce\'bb\'d6\'c3\'ca\'c7\'d4\'da\'c7\'f8\'d3\'f2\'c4\'da\'bb\'b9\'ca\'c7\'c7\'f8\'d3\'f2\'cd\'e2)\
+	>\'c5\'d0\'b6\'cf\'c7\'f8\'d3\'f2\'bc\'e0\'cc\'fd\'ca\'c7\'b7\'f1\'bf\'c9\'d3\'c3\
+		[CLLocationManager isMonitoringAvailableForClass:[CLCirularRegion class]];\
+	> \'c8\'e7\'b9\'fb\'b2\'bb\'bf\'c9\'d3\'c3, \'b8\'e6\'cb\'df\'d3\'c3\'bb\'a7\'b2\'bb\'bf\'c9\'d3\'c3\
+	> \'c8\'e7\'b9\'fb \'c7\'f8\'d3\'f2\'b0\'eb\'be\'b6 > \'d7\'ee\'b4\'f3\'bc\'e0\'cc\'fd\'b7\'b6\'ce\'a7 \'ce\'de\'b7\'a8\'bc\'e0\'cc\'fd\'b3\'c9\'b9\'a6\
+	> \'c8\'e7\'b9\'fb\'bf\'c9\'d3\'c3\
+		1 self.loction requestStateForRegion:\
+		2 \'d4\'da\'b6\'d4\'d3\'a6\'b5\'c4\'b4\'fa\'c0\'ed locationManager:didDetermineState:forRegion\
+\
+\
+\
+\
+\
+\
+\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb\
+	>\'b5\'bc\'c8\'ebCL\'cd\'b7\'ce\'c4\'bc\'fe\
+	> \'b4\'b4\'bd\'a8CLGeocoder\'b6\'d4\'cf\'f3 geocoder\
+	> self.geocoder geocoderAddressString:@\'a1\'b0\'b5\'d8\'c0\'ed\'ce\'bb\'d6\'c3\'c3\'fb\'d7\'d6\'a1\'b1 completionHandler:nil\
+	> \'c9\'cf\'c3\'e6\'b7\'b5\'bb\'d8\'b5\'c4\'ca\'c7\'b6\'e0\'b8\'f6\'be\'ad\'ce\'b3\'b6\'c8(\'d2\'f2\'ce\'aa\'b5\'d8\'b5\'e3\'bf\'c9\'c4\'dc\'d6\'d8\'c3\'fb)\
+\
+			\
+\'b7\'b5\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb\
+	>\'b4\'b4\'bd\'a8 CLLocation\'b6\'d4\'cf\'f3 loc \'d6\'b8\'b6\'a8\'be\'ad\'ce\'b3\'b6\'c8;\
+	> self.geocoder reverseGeocoderLocation:loc completionHandler:nil\
+	>\'b7\'b5\'bb\'d8\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb
+\f1\b \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+MapKit\
+\'d6\'f7\'d2\'aa\'b2\'e0\'d6\'d8\'d3\'eb\'b5\'d8\'cd\'bc\'b5\'c4UI\'d5\'b9\'ca\'be\
+\
+\'b9\'a6\'c4\'dc:\'d3\'c3\'d3\'da\'b5\'d8\'cd\'bc\'b5\'c4\'d5\'b9\'ca\'be, \'c0\'fd\'c8\'e7\'b4\'f3\'cd\'b7\'d5\'eb/\'c2\'b7\'cf\'df/\'b8\'b2\'b8\'c7\'b2\'e3(\'d7\'c5\'d6\'d8\'bd\'e7\'c3\'e6\'b5\'c4\'d5\'b9\'ca\'be)\
+\
+\
+\'ba\'cb\'d0\'c4UI \
+MKMapView(\'d7\'a8\'c3\'c5\'d3\'c3\'c0\'b4\'cf\'d4\'ca\'be\'b5\'d8\'cd\'bc)\
+>\'b5\'d8\'cd\'bc\'d1\'f9\'ca\'bd\
+	MKMapTypeStandard \'c6\'d5\'cd\'a8\'b5\'d8\'cd\'bc\
+	MKMapTypeSatellite  \'ce\'c0\'d0\'c7\'b5\'d8\'cd\'bc\
+	MKMapTypeHybrid	    \'bb\'ec\'ba\'cf\'c4\'a3\'ca\'bd(\'c6\'d5\'cd\'a8\'b5\'d8\'cd\'bc\'b8\'b2\'b8\'c7\'d4\'da\'ce\'c0\'d0\'c7\'b5\'d8\'cd\'bc\'c9\'cf)\
+	MKMapTypeSatelliteFlyover  3d\'ce\'c0\'d0\'c7 ios9 \'d6\'ae\'ba\'f3\
+	MKMapTypeHybridFlyover    3d\'c1\'a2\'cc\'e5\'bb\'ec\'ba\'cf ios9 \'d6\'ae\'ba\'f3\
+\
+\
+\
+\
+>\'cf\'d4\'ca\'be\'b5\'c4\'d6\'d0\'d0\'c4\'c7\'f8\'d3\'f2
+\f0\b0  centerCoordinate \
+	\'b5\'b1\'ca\'d3\'cd\'bc\'b3\'ca\'cf\'d6\'b5\'c4\'ca\'b1\'ba\'f2, mapview\'b5\'c4\'ca\'d3\'cd\'bc\'d6\'d0\'d0\'c4\'be\'cd\'ca\'c7\'d5\'e2\'b8\'f6\'d6\'b8\'b6\'a8\'b5\'c4\'be\'ad\'ce\'b3\'b6\'c8\
+	\'c4\'ac\'c8\'cf\'c7\'e9\'bf\'f6\'cf\'c2\'c8\'e7\'b9\'fb\'d6\'bb\'c9\'e8\'d6\'c3\'c1\'cb\'d5\'e2\'b8\'f6\'ca\'f4\'d0\'d4, \'ca\'d3\'cd\'bc\'d5\'b9\'ca\'be\'b5\'c4\'d2\'bb\'b0\'e3\'ca\'c7\'ba\'dc\'b4\'f3\'b5\'c4\'c7\'f8\'d3\'f2, \'b1\'c8\'c8\'e7\'d5\'b9\'ca\'be\'b5\'c4\'ca\'c7\'d5\'fb\'b8\'f6\'d6\'d0\'b9\'fa\'b5\'d8\'cd\'bc, \'b5\'ab\'ca\'c7\'b5\'b1\'c7\'b0\'c6\'c1\'c4\'bb\'b5\'c4\'d6\'d0\'d0\'c4\'ca\'c7\'d5\'e2\'b8\'f6\'d6\'b8\'b6\'a8\'b5\'c4\'be\'ad\'ce\'b3\'b6\'c8
+\f1\b \
+\
+\
+\
+\
+>\'c7\'f8\'d3\'f2 MKCoordinateRegion region\
+	\'ca\'c7\'d2\'bb\'b8\'f6\'bd\'e1\'b9\'b9\'cc\'e5 \{CLLocationCoordinate2D, MKCoordinateSpan\}\
+	\
+		1. CLLocationCoordinate2D\'be\'ad\'ce\'b3\'b6\'c8\'d7\'f8\'b1\'ea\'b5\'c4\'bd\'e1\'b9\'b9\'cc\'e5\
+	\
+		2.MKCoordinateSpan\'d2\'b2\'ca\'c7\'d2\'bb\'b8\'f6\'bd\'e1\'b9\'b9\'cc\'e5 \{CLLocationDegrees latitudeDelta,CLLocationDegrees longitudeDelta\}\
+		latitudeDelta \'b5\'d8\'cd\'bc\'c9\'cf\'cf\'d4\'ca\'be\'b4\'d3\'b1\'b1\'cf\'f2\'c4\'cf\'b5\'c4\'be\'e0\'c0\'eb(\'ce\'b3\'b6\'c8\'bf\'e7\'b6\'c8,2\'b8\'f6\'b5\'d8\'b7\'bd\'ce\'b3\'b6\'c8\'b5\'c4\'b2\'ee, 1\'b6\'c8\'b5\'c4\'b2\'ee\'d6\'b5\'d4\'bc\'ce\'aa111km)\
+		longitudeDelta \'be\'ad\'b6\'c8\'b5\'c4\'bf\'e7\'b6\'c8(\'be\'ad\'b6\'c8\'b5\'c4\'be\'e0\'c0\'eb\'ca\'c7\'b4\'d3\'b3\'e0\'b5\'c0\'bf\'aa\'ca\'bc\'cd\'f92\'bc\'ab\'b2\'bb\'b6\'cf\'b4\'d3111km\'bc\'f5\'c9\'d9\'b5\'bd0\'b5\'c4)\
+	\
+	\'c7\'f8\'d3\'f2\'bf\'c9\'d2\'d4\'d0\'de\'b8\'c4\'d2\'d4\'ca\'ca\'d3\'a6\'ca\'d3\'cd\'bc\'b5\'c4\'d7\'dd\'ba\'e1\'b1\'c8\
+		\'b5\'f7\'d3\'c3regionThatFits:\
+		\'b8\'c3\'b7\'bd\'b7\'a8\
+	\
+\
+> \'b5\'d8\'cd\'bc\'cf\'d4\'ca\'be\'bf\'d8\'d6\'c6\'ca\'f4\'d0\'d4\
+	1  showsCompass \'ca\'c7\'b7\'f1\'cf\'d4\'ca\'be\'d6\'b8\'c4\'cf\'d5\'eb\
+	2 showsScale	\'ca\'c7\'b7\'f1\'cf\'d4\'ca\'be\'b1\'c8\'c0\'fd\'b3\'df\
+	3 showsTraffic \'ca\'c7\'b7\'f1\'cf\'d4\'ca\'be\'bd\'bb\'cd\'a8\
+	4 \'ca\'c7\'b7\'f1\'cf\'d4\'ca\'be\'bd\'a8\'d6\'fe\'ce\'ef showsBuildings\
+	5 zoomEnabled \'ca\'c7\'b7\'f1\'cb\'f5\'b7\'c5 \'c4\'actrue\
+	6 scrollEnabled \'ca\'c7\'b7\'f1\'b9\'f6\'b6\'af \
+	7 rotateEnabled \'ca\'c7\'b7\'f1\'d0\'fd\'d7\'aa\
+	9 pitchEnable \'ca\'c7\'b7\'f1\'cf\'d4\'ca\'be3dview\
+		\
+\
+	\
+\
+\
+\
+\
+\
+\
+\
+\
+\'b8\'fa\'d7\'d9\'d3\'c3\'bb\'a7\'b5\'c4\'ce\'bb\'d6\'c3(\'b2\'bb\'bf\'aa\'c6\'f4\'b8\'fa\'d7\'d9\'b7\'fe\'ce\'f1 \'ce\'d2\'d5\'e6\'bb\'fa\'ca\'c7ios12)\
+	>info.plist \'c5\'e4\'d6\'c3privacy - Location When In Use Usage Description\
+	>\'ca\'d6\'bb\'fa\'ca\'da\'c8\'a8app\'b5\'c4\'b6\'a8\'ce\'bb\'b9\'a6\'c4\'dc\
+	\'d5\'e2\'d1\'f9\'be\'cd\'bf\'c9\'d2\'d4\'d4\'da\'b5\'d8\'cd\'bc\'c9\'cf\'cf\'d4\'ca\'be\'d3\'c3\'bb\'a7\'b5\'c4\'ce\'aa, \'b2\'a2\'c7\'d2\'b8\'fa\'d7\'d9 \
+\
+\
+\'b8\'fa\'d7\'d9\'cf\'d4\'ca\'be\'d3\'c3\'bb\'a7\'b5\'c4\'ce\'bb\'d6\'c3(\'bf\'aa\'c6\'f4\'b8\'fa\'d7\'d9\'b7\'fe\'ce\'f1)\
+	> \'b4\'f2\'bf\'aa\'b6\'a8\'ce\'bb\'b7\'fe\'ce\'f1, \'cf\'ea\'c7\'e9\'bc\'fbCL\'c0\'ef\'b8\'f7\'b8\'f6iOS\'b0\'e6\'b1\'be\'b6\'a8\'ce\'bb\'b7\'fe\'ce\'f1\'bf\'aa\'c6\'f4\'b5\'c4\'b2\'bd\'d6\'e8\
+	\
+	> \'b4\'b4\'bd\'a8MKMapView self.map\
+\
+	> \'c9\'e8\'d6\'c3MKMapVeiw\'b5\'c4\'b8\'fa\'d7\'d9\'c4\'a3\'ca\'bd(userTrackingMode)\
+		MKUserTrackingModeNone: \'b2\'bb\'b8\'fa\'d7\'d9\
+		MKUserTrackingModeFollow: \'b8\'fa\'d7\'d9\'b2\'a2\'d4\'da\'b5\'d8\'cd\'bc\'c9\'cf\'cf\'d4\'ca\'be\'d3\'c3\'bb\'a7\'b5\'c4\'b5\'b1\'c7\'b0\'ce\'bb\'d6\'c3\
+		MKUserTrackingModeFollowWithHeading: \'b8\'fa\'d7\'d9\'b2\'a2\'d4\'da\'b5\'d8\'cd\'bc\'c9\'cf\'cf\'d4\'ca\'be\'d3\'c3\'bb\'a7\'b5\'b1\'c7\'b0\'b5\'c4\'ce\'bb\'d6\'c3, \'bb\'e1\'b8\'fa\'cb\'e6\'d3\'c3\'bb\'a7\'b5\'c4\'c7\'b0\'bd\'f8\'b7\'bd\'cf\'f2\'d0\'fd\'d7\'aa\
+	\
+	> \'bb\'e1\'cf\'c8\'d7\'dfmapview:regionDidChange: \'c8\'bb\'ba\'f3locationManager:didUpdateLocations, \'d7\'ee\'ba\'f3\'c8\'e7\'b9\'fb\'b4\'f2\'bf\'aa\'c1\'cb\'b8\'fa\'d7\'d9\'c4\'a3\'ca\'bd, \'bb\'e1\'d7\'dfmap\'b5\'c4\'b4\'fa\'c0\'edmapView:didUpdateUserLocation: \'bf\'c9\'d2\'d4\'d4\'da\'b4\'cb\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8\'c0\'ef\'d0\'de\'b8\'c4\'d3\'c3\'bb\'a7\'ce\'bb\'d6\'c3\'b5\'c4\'d0\'c5\'cf\'a2(\'b4\'f3\'cd\'b7\'d5\'eb
+\f0\b0 , \'c6\'e4\'ca\'b5\'ca\'c7\'d0\'de\'b8\'c4\'ca\'fd\'be\'dd\'c4\'a3\'d0\'cd
+\f1\b )\
+	PS:\'bf\'aa\'c6\'f4\'b8\'fa\'d7\'d9\'b5\'c4\'ca\'b1\'ba\'f2, \'cf\'b5\'cd\'b3\'bb\'e1\'c4\'da\'b2\'bf\'b4\'b4\'bd\'a8 \'d3\'c3\'bb\'a7\'b5\'b1\'c7\'b0\'ce\'bb\'d6\'c3\'b5\'c4\'ca\'fd\'be\'dd\'c4\'a3\'d0\'cd(\'c6\'e4\'ca\'b5\'ca\'c7\'d2\'bb\'d6\'d6\'b4\'f3\'cd\'b7\'d5\'eb\'c4\'a3\'d0\'cd, \'ba\'cd\'cf\'c2\'c3\'e6\'cc\'ed\'bc\'d3\'b4\'f3\'cd\'b7\'d5\'eb\'c4\'a3\'d0\'cd\'d2\'bb\'d1\'f9\'b5\'c4\'b6\'ab\'ce\'f7)\
+\
+\
+\
+\
+\'d7\'b7\'d7\'d9\'cf\'d4\'ca\'be\'d3\'c3\'bb\'a7\'ce\'bb\'d6\'c3(\'b4\'f3\'cd\'b7\'d5\'eb)\
+	\'d4\'da\'c9\'cf\'c3\'e6\'b5\'c4\'b8\'fa\'d7\'d9\'d3\'c3\'bb\'a7\'ce\'bb\'d6\'c3\'b5\'c4\'b4\'fa\'c0\'ed\'bb\'d8\'b5\'f7\'c0\'ef \'bb\'e1\'b4\'ab\'bb\'e1\'d2\'bb\'b8\'f6\'cf\'b5\'cd\'b3\'b4\'b4\'bd\'a8\'b5\'c4\'b4\'f3\'cd\'b7\'d5\'eb\'b6\'d4\'cf\'f3, \'bf\'c9\'d2\'d4\'bc\'f2\'b5\'a5\'b5\'c4\'d0\'de\'b8\'c4\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'d0\'c5\'cf\'a2, \'b1\'ea\'cc\'e2\'ba\'cd\'d7\'d3\'b1\'ea\'cc\'e2\'b5\'c8, \'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'b6\'d4\'d3\'a6\'b5\'c4\'ca\'c7 \'d3\'c3\'bb\'a7\'b5\'b1\'c7\'b0\'ce\'bb\'d6\'c3\'b5\'c4\'b4\'f3\'cd\'b7\'d5\'eb\'ca\'d3\'cd\'bc\'c4\'a3\'d0\'cd,  \'c8\'e7\'b9\'fbmapView:viewForAnnotation: \'b5\'c4\'b4\'fa\'c0\'ed\'b2\'bb\'ca\'b5\'cf\'d6, \'bb\'f2\'d5\'df\'b7\'b5\'bb\'d8nil, \'c4\'c7\'c3\'b4mapView\'bb\'e1\'b4\'b4\'bd\'a8\'c4\'ac\'c8\'cf\'b5\'c4\'ca\'d3\'cd\'bc, \'d7\'a2\'d2\'e2\'d5\'e2\'b8\'f6\'ca\'b1\'ba\'f2\'b5\'c4\'ca\'d3\'cd\'bc\'b2\'bb\'ca\'c7\'cf\'c2\'c3\'e6\'bd\'b2\'b5\'c4MKPinAnnotationView, \'bf\'c9\'c4\'dc\'ca\'c7MKAnnotationView(\'ce\'d2\'d5\'e6\'bb\'faios12\'b2\'e2\'ca\'d4\'ca\'c7\'c0\'e0\'ca\'c7 MKModerUserLocationView)\
+\
+\
+\
+\
+\
+\
+\'cc\'ed\'bc\'d3\'b4\'f3\'cd\'b7\'d5\'eb(\'b1\'c8\'c8\'e7\'b5\'e3\'bb\'f7\'b5\'d8\'cd\'bc\'c9\'cf\'b5\'c4\'c4\'b3\'b8\'f6\'b5\'e3, \'b2\'bb\'ca\'b5\'cf\'d6\'cc\'ed\'bc\'d3\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'bb\'d8\'b5\'f7mapView:viewForAnnotation\'bb\'f2\'d5\'df\'d4\'da\'b8\'c3\'bb\'d8\'b5\'f7\'c0\'ef\'b7\'b5\'bb\'d8nil)\
+\
+>> \'d4\'da\'b5\'e3\'bb\'f7\'b5\'c4\'ca\'b1\'ba\'f2,\'bb\'f1\'c8\'a1\'ce\'bb\'d6\'c3\'cc\'ed\'bc\'d3\'d2\'bb\'b8\'f6\'b4\'f3\'cd\'b7\'d5\'eb\'c4\'a3\'d0\'cd\
+	\'bb\'f1\'c8\'a1\'b5\'e3\'bb\'f7\'ce\'bb\'d6\'c3\'b5\'c4\'b5\'e3p \'a1\'aa> \'bd\'abp\'d7\'aa\'bb\'bb\'b5\'bdmapView\'b5\'c4\'d7\'f8\'b1\'ea\'cf\'b5\'c0\'ef\'b5\'c3\'b5\'bdp2 \'a1\'aa>\'b5\'f7\'d3\'c3mapView\'b5\'c4\'b7\'bd\'b7\'a8\'bd\'abp2\'d7\'aa\'bb\'bb\'b3\'c9\'be\'ad\'ce\'b3\'b6\'c8 \'a1\'aa>\'cd\'a8\'b9\'fd\'b7\'b5\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb,\'bb\'f1\'c8\'a1\'b5\'d8\'d6\'b7\'d0\'c5\'cf\'a2 \'a1\'aa>\'c8\'bb\'ba\'f3\'cf\'c2\'c3\'e6\'bf\'aa\'ca\'bc\'cc\'ed\'bc\'d3\'b4\'f3\'cd\'b7\'d5\'eb\
+\
+	1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'d7\'f1\'d1\'adMKAnnotation\'c0\'e0, \'c8\'bb\'ba\'f3\'ca\'b5\'cf\'d6\'d0\'ad\'d2\'e9\'b7\'bd\'b7\'a8, \'c8\'bb\'ba\'f3\'b4\'b4\'bd\'a8\'b6\'d4\'cf\'f3\
+		> \'bf\'c9\'d2\'d4\'b6\'a8\'d2\'e5\'d7\'d4\'bc\'ba\'b5\'c4\'ca\'f4\'d0\'d4\'c3\'fb\'b3\'c6, \'c8\'bb\'ba\'f3\'b4\'fa\'c0\'ed\'ca\'b5\'cf\'d6\'c0\'ef\'b7\'b5\'bb\'d8\'b6\'d4\'d3\'a6\'b5\'c4\'d7\'d4\'bc\'ba\'b5\'c4\'b3\'c9\'d4\'b1\'b1\'e4\'c1\'bf, mapView\'bb\'d8\'c8\'a5\'b5\'f7\'d3\'c3\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8, \'b2\'bb\'b9\'dc\'d7\'f1\'d1\'ad\'d0\'ad\'d2\'e9\'b6\'d4\'cf\'f3\'b5\'c4\'ca\'f4\'d0\'d4\'c3\'fb\'d7\'d6, \'d2\'b2\'bf\'c9\'d6\'b1\'bd\'d3\'ca\'b9\'d3\'c3\'d0\'ad\'d2\'e9\'c0\'ef\'b5\'c4\'ca\'f4\'d0\'d4, \'bd\'abreadOnly\'c8\'a5\'b5\'f4, \'d5\'e2\'d1\'f9\'bf\'c9\'d2\'d4\'d6\'b1\'bd\'d3\'b8\'b3\'d6\'b5 \'b1\'c8\'bd\'cf\'b7\'bd\'b1\'e3\
+\
+	2 self.map addAnnotation:newAnnotation\
+\
+	3 \'b5\'da2\'b2\'bd\'d6\'e8\'b5\'f7\'d3\'c3\'cd\'ea\'b1\'cf\'ba\'f3, mapView\'bb\'e1\'bb\'d8\'b5\'f7\'d2\'bb\'b8\'f6\'b4\'fa\'c0\'ed\'b7\'bd\'b7\'a8 mapView:viewForAnnotation: \'bd\'abnewAnnotation\'b4\'ab\'b9\'fd\'c0\'b4\
+		> \'c8\'e7\'b9\'fb\'b8\'c3\'d0\'ad\'d2\'e9\'b7\'bd\'b7\'a8\'c3\'bb\'d3\'d0\'ca\'b5\'cf\'d6 \'bb\'f2 \'b7\'b5\'bb\'d8nil \'cf\'b5\'cd\'b3\'bb\'e1\'d7\'d4\'bc\'ba\'b4\'b4\'bd\'a8 MKPinAnnotationView (\'d0\'ad\'d2\'e9\'b7\'bd\'b7\'a8\'b5\'c4.h\'ce\'c4\'bc\'fe\'c3\'bb\'d3\'d0\'cb\'b5\'c3\'f7,\'b5\'ab\'bf\'c9\'d2\'d4\'c8\'a5\'b2\'e9\'b5\'bd\'ce\'c4\'b5\'b5, \'ce\'c4\'b5\'b5\'cb\'b5\'c1\'cb,\'c8\'e7\'b9\'fb\'b7\'b5\'bb\'d8nil,mapView\'bb\'e1\'b4\'b4\'bd\'a8pin\'b5\'c4annotationView\'d7\'f6\'ce\'aa\'c4\'ac\'c8\'cf\'b5\'c4, ios12 \'cf\'b5\'cd\'b3\'b4\'b4\'bd\'a8\'b5\'c4\'ca\'c7MKMarkerAnnotationView)\
+\
+\
+\
+\'c4\'a3\'c4\'e2 mapView:viewForAnnotation\'b5\'c4\'cf\'b5\'cd\'b3\'d7\'f6\'b7\'a8(\'d7\'a2\'d2\'e2\'b4\'cb\'b7\'bd\'b7\'a8\'ca\'c7\'ba\'cdcell\'b5\'c4\'b7\'b5\'bb\'d8\'d2\'bb\'d1\'f9\'b5\'c4\'d6\'d8\'d3\'c3\'bb\'fa\'d6\'c6)\
+> \'bf\'aa\'c6\'f4\'b8\'fa\'d7\'d9\'b7\'fe\'ce\'f1\'ba\'f3, \'c4\'a3\'c4\'e2\'ca\'b5\'cf\'d6\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8\
+	1 \'b4\'d3\'b8\'b4\'d3\'c3\'b3\'d8\'c0\'ef\'b0\'b4\'b1\'ea\'ca\'b6\'c8\'a1\'b3\'f6\'b6\'d4\'d3\'a6\'b5\'c4 MKAnnotationView* view(ios12\'c0\'e0\'ca\'c7 MKModerUserLocationView)\
+\
+	2 \'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'c8\'a1\'b5\'bd \'b4\'b4\'bd\'a8view, \'c8\'bb\'ba\'f3\'c9\'e8\'d6\'c3view\'b5\'c4image \'bf\'c9\'d2\'d4\'b8\'c4\'b1\'e4\'c9\'c1\'cb\'b8\'b5\'c4\'ca\'d3\'cd\'bc\'d1\'f9\'ca\'bd\'ce\'aa\'d7\'d4\'bc\'ba\'b5\'c4\'cd\'bc\'b1\'ea\
+	\
+	3 \'c8\'e7\'b9\'fb\'c8\'a1\'b5\'bd, \'d6\'b1\'bd\'d3\'c9\'e8\'d6\'c3 view.annotation = annotation\
+\
+	4 \'b7\'b5\'bb\'d8view\
+\
+\
+\
+> \'cc\'ed\'bc\'d3\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'ca\'b1\'ba\'f2, \'c4\'a3\'c4\'e2\'ca\'b5\'cf\'d6\'d5\'e2\'b8\'f6\'b7\'bd\'b7\'a8(\'c8\'e7\'c9\'cf\'c3\'e6, \'cc\'ed\'bc\'d3\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'c1\'f7\'b3\'cc\'cd\'ea\'b1\'cf\'ba\'f3\'c0\'b4\'d5\'e2\'c0\'ef)\
+	1 \'b4\'d3\'b8\'b4\'d3\'c3\'b3\'d8\'c0\'ef\'b0\'b4\'b1\'ea\'ca\'b6\'c8\'a1\'b3\'f6\'b6\'d4\'d3\'a6\'b5\'c4 MKPinAnnotationView* view(\'bc\'cc\'b3\'d0\'d7\'d4MKAnnotationView,  ios12 \'cf\'b5\'cd\'b3\'b4\'b4\'bd\'a8\'b5\'c4\'ca\'c7MKMarkerAnnotationView)\
+\
+	2 \'c8\'e7\'b9\'fb\'c3\'bb\'d3\'d0\'c8\'a1\'b5\'bd \'b4\'b4\'bd\'a8view, \'c8\'e7\'b9\'fb\'c8\'a1\'b5\'bd\'bf\'c9\'d2\'d4\'d6\'b1\'bd\'d3\'c9\'e8\'d6\'c3\'d5\'e2\'d0\'a9\'ca\'f4\'d0\'d4\
+		>\'c8\'bb\'ba\'f3\'c9\'e8\'d6\'c3view\'b5\'c4image, \'b2\'bb\'bb\'e1\'d3\'d0\'d0\'a7\'b9\'fb(\'d2\'f2\'ce\'aaMKPinAnnotationView\'c4\'da\'b2\'bf\'d6\'d8\'d0\'b4\'c1\'cb \'b8\'b8\'c0\'e0\'b5\'c4image\'b5\'c4setter\'b7\'bd\'b7\'a8, \'cd\'bc\'b1\'ea\'be\'cd\'ca\'c7\'cf\'b5\'cd\'b3\'b5\'c4, \'b2\'bb\'c4\'dc\'b8\'c4\'b1\'e4\'cf\'b5\'cd\'b3\'b5\'c4\'d7\'f6\'b7\'a8)\
+		>\'bf\'c9\'d2\'d4\'c9\'e8\'d6\'c3\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'d4\'b2\'d0\'cd\'cd\'bc\'b1\'ea\'cf\'d4\'ca\'be\'b5\'c4\'d1\'d5\'c9\'ab, \'b5\'e3\'bb\'f7\'ba\'f3\'b4\'f3\'cd\'b7\'d5\'eb\'b4\'d3\'cc\'ec\'b6\'f8\'bd\'b5\'b5\'c4\'b6\'af\'bb\'ad\
+		>\'bb\'b9\'bf\'c9\'d2\'d4\'c9\'e8\'d6\'c3\'b8\'b8\'c0\'e0\'c0\'ef\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'cd\'cf\'d7\'a7draggable, \'d5\'e2\'d1\'f9\'bf\'c9\'d2\'d4\'d4\'damapView\'c9\'cf\'cd\'cf\'d7\'a7\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'ca\'b1\'ba\'f2, \'b2\'a2\'c7\'d2\'b6\'e0\'d7\'a7\'cd\'ea\'b1\'cf\'ba\'f3, mapView\'bb\'e1\'d7\'d4\'b6\'af\'b8\'fc\'d0\'c2\'b4\'f3\'cd\'b7\'d5\'eb\'c4\'a3\'d0\'cd\'d0\'c5\'cf\'a2, \'b1\'ea\'cc\'e2\'d2\'b2\'bb\'e1\'b6\'af\'cc\'ac\'b1\'e4\'bb\'af\
+\
+	3 \'b7\'b5\'bb\'d8view\
+\
+\
+PS:\'d2\'d4\'c9\'cf2\'d6\'d6\'c7\'e9\'bf\'f6\'cf\'c2\'cf\'b5\'cd\'b3\'b5\'c4\'d7\'f6\'b7\'a8\
+\'d7\'d4\'b6\'a8\'d2\'e5\'d7\'d4\'bc\'ba\'b5\'c4\'b4\'f3\'cd\'b7\'d5\'eb\'b5\'c4\'c7\'e9\'bf\'f6 \'ba\'cd\'c9\'cf\'c3\'e6\'bf\'aa\'c6\'f4\'b8\'fa\'d7\'d9\'b7\'fe\'ce\'f1\'ba\'f3, \'c4\'a3\'c4\'e2\'ca\'b5\'cf\'d6\'b5\'c4\'b9\'fd\'b3\'cc\'ca\'c7\'d2\'bb\'d2\'bb\'d6\'c2\'b5\'c4, \'b5\'b1\'c8\'bb\'bf\'c9\'d2\'d4\'b6\'a8\'d2\'e5\'d7\'d4\'bc\'ba\'b5\'c4\'b4\'f3\'cd\'b7\'d5\'eb\'ca\'d3\'cd\'bc\'c0\'e0\
+\
+	\
+		\
+\
+\
+\
+\'cc\'ed\'bc\'d3\'b8\'b2\'b8\'c7\'b2\'e3\
+\'d4\'ad\'c0\'ed\'b2\'bd\'d6\'e8\'b6\'bc\'ba\'cd\'b4\'f3\'cd\'b7\'d5\'eb\'d2\'bb\'d1\'f9, \'b6\'d4\'ca\'fd\'be\'dd\'c4\'a3\'d0\'cd\'b5\'c4\'b2\'d9\'d7\'f7, \'ca\'fd\'be\'dd\'c4\'a3\'d0\'cd\'b1\'d8\'d0\'eb\'d7\'f1\'d1\'adMKOverlay\'d0\'ad\'d2\'e9, \'ba\'cdMKAnnotation\'c0\'e0\'b1\'c8\
+\'cf\'b5\'cd\'b3\'b8\'f8\'b3\'f6\'c1\'cb\'bc\'b8\'b8\'f6\'b3\'a3\'d3\'c3\'b5\'c4 \'b8\'b2\'b8\'c7\'b2\'e3\'c4\'a3\'d0\'cd\
+	>\'d4\'b2\'d0\'cd\'c4\'a3\'d0\'cdMKCircle, \'c6\'e4\'b6\'d4\'d3\'a6\'b5\'c4\'b8\'b2\'b8\'c7\'b2\'e3\'ca\'d3\'cd\'bc\'ca\'c7 MKCircleRenderer\
+	>\'d5\'db\'cf\'df\'c4\'a3\'d0\'cdMKPolyline  \'b6\'d4\'d3\'a6\'b5\'c4\'b8\'b2\'b8\'c7\'b2\'e3\'ca\'d3\'cd\'bc\'ca\'c7 MKPolylineRenderer\
+PS:\'b5\'f7\'d3\'c3\'cd\'ea self.map addOverlay:\'b6\'d4\'d3\'a6\'b5\'c4\'c4\'a3\'d0\'cd\'ba\'f3, \'d4\'da\'b4\'fa\'c0\'ed mapView:rendererForOverlay:\'c0\'ef, \'b8\'f9\'be\'dd\'b4\'a9\'b9\'fd\'c0\'b4\'b5\'c4\'c4\'a3\'d0\'cd\'b5\'c4class, \'c0\'b4\'b4\'b4\'bd\'a8\'b6\'d4\'d3\'a6\'b5\'c4renderer,\'b5\'ab\'ca\'c7\'d5\'e2\'c0\'ef\'c3\'e6\'c3\'bb\'d3\'d0\'b8\'b4\'d3\'c3\'bb\'fa\'d6\'c6,\'bf\'c9\'d2\'d4\'d7\'d4\'bc\'ba\'ca\'b5\'cf\'d6, \'bf\'c9\'d2\'d4\'b8\'c4\'cf\'b5\'cd\'b3renderer\'b5\'c4\'ca\'f4\'d0\'d4, \'b1\'c8\'c8\'e7\'d1\'d5\'c9\'ab,\'cf\'df\'bf\'ed,\'c3\'e8\'b1\'df,\'cc\'ee\'b3\'e4,\'cd\'b8\'c3\'f7\'b5\'c8\'b5\'c8\
+\
+\
+\
+\
+\
+\'b5\'bc\'ba\'bd\'b5\'c4\'ca\'b5\'cf\'d6\'b7\'bd\'b0\'b8\
+	1> \'bd\'ab\'ce\'bb\'d6\'c3\'cc\'e1\'b9\'a9\'b8\'f8\'cf\'b5\'cd\'b3\'b5\'c4\'b5\'d8\'cd\'bc, \'d3\'d0\'cf\'b5\'cd\'b3app\'b5\'bc\'ba\'bd\
+	2> \'b4\'d3\'d7\'d4\'bc\'ba\'b5\'c4\'b7\'fe\'ce\'f1\'c6\'f7\'bb\'f1\'c8\'a1\'b5\'bc\'ba\'bd\'ca\'fd\'be\'dd, \'c8\'bb\'ba\'f3\'d7\'d4\'bc\'ba\'b6\'af\'ca\'d6\'bb\'e6\'d6\'c6\'b5\'bc\'ba\'bd, \'c7\'b0\'cc\'e1\'ca\'c7\'b5\'bc\'ba\'bd\'b5\'d8\'cd\'bc\'ca\'c7\'d7\'d4\'bc\'ba\'b9\'ab\'cb\'be\'b5\'c4\'ca\'fd\'be\'dd, \'d5\'e2\'c0\'ef\'ca\'c7\'cd\'a8\'b9\'fd\'c6\'bb\'b9\'fb\'b5\'c4\'bd\'d3\'bf\'da\'c8\'a5\'b5\'f7\'d3\'c3\'c6\'bb\'b9\'fb\'b5\'c4\'b5\'d8\'cd\'bc\
+	3> \'c0\'fb\'d3\'c3\'b5\'da\'c8\'fd\'b7\'bdsdk(\'b0\'d9\'b6\'c8, \'b8\'df\'b5\'c2)\
+\
+\
+\
+\'b5\'bc\'ba\'bd\'c0\'ef\'ba\'cb\'d0\'c4\'b5\'c4\'c0\'e0 MKMapItem\
+	\'d6\'f7\'d2\'aa \'b5\'f7\'d3\'c3 [MKMapItem openMapsWithItems: launchOptions:] \'b4\'f2\'bf\'aa\'cf\'b5\'cd\'b3\'b5\'c4\'b5\'d8\'cd\'bc\'bd\'f8\'d0\'d0\'b5\'bc\'ba\'bd\
+	> \'b4\'b4\'bd\'a8\'c6\'f0\'b5\'e3 beginItem\
+		\'cd\'a8\'b9\'fd\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb \'bd\'ab\'c6\'f0\'b5\'e3\'b5\'c4\'b5\'d8\'d6\'b7 \'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb, \'c8\'bb\'ba\'f3\'d4\'da\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb\'b5\'c4\'bb\'d8\'b5\'f7\'c0\'ef\'c4\'c3\'b5\'bd CLPlacemark\'b6\'d4\'cf\'f3clp1\
+		\'cd\'a8\'b9\'fdclp1\'b4\'b4\'bd\'a8beginItem\
+	> \'bd\'d3\'d7\'c5\'bb\'d8\'b5\'f7\'c0\'ef \'bc\'cc\'d0\'f8\'b1\'e0\'c2\'eb\'d6\'d5\'b5\'e3\
+		\'bb\'f1\'c8\'a1\'d6\'d5\'b5\'e3\'b6\'d4\'d3\'a6\'b5\'c4 clp2\
+		\'b4\'b4\'bd\'a8endItem\
+		\'b4\'b4\'bd\'a8\'bc\'fc\'d6\'b5\'b6\'d4\'d7\'d6\'b5\'e4 \'d6\'f7\'d2\'aa\'ca\'c7\'b5\'bc\'ba\'bd\'b5\'c4\'d2\'bb\'d0\'a9\'d0\'c5\'cf\'a2, \'cf\'ea\'bc\'fb\'cd\'b7\'ce\'c4\'bc\'fe\
+	> \'d4\'d9\'d4\'da\'b5\'da\'b6\'fe\'b4\'ce\'d6\'d5\'b5\'e3\'b5\'c4\'bb\'d8\'b5\'f7\'c0\'ef \'b5\'f7\'d3\'c3\'cf\'b5\'cd\'b3\'b5\'c4\'b7\'bd\'b7\'a8 \'bd\'ab beginItem \'ba\'cd endItem\'b4\'ab\'bd\'f8\'c8\'a5\'b4\'f2\'bf\'aa\'cf\'b5\'cd\'b3\'b5\'d8\'cd\'bc\'b5\'bc\'ba\'bd\
+\
+\
+\
+\
+\
+\'b5\'d8\'cd\'bc\'bf\'ec\'d5\'d5\
+	\'ba\'cb\'d0\'c4\'c0\'e0MKMapSnapshotter\
+		\'b3\'f5\'ca\'bc\'bb\'afMKMapSnapshotter\'b5\'c4\'ca\'b1\'ba\'f2\'d0\'e8\'d2\'aa\'d2\'bb\'b8\'f6 MKMapSnapshotOptions\'b6\'d4\'cf\'f3\
+			>mapType \'d2\'aa\'bf\'ec\'d5\'d5\'cc\'e2\'cd\'bc\'b5\'c4\'c0\'e0\'d0\'cd \'b6\'d4\'d3\'a6MapView\'b5\'c4mapType\
+			>region  \'b5\'d8\'cd\'bc\'c7\'f8\'d3\'f2 \'b6\'d4\'d3\'a6MapView\'b5\'c4region\
+			>size \'b5\'d8\'cd\'bc\'bf\'ec\'d5\'d5\'c4\'bf\'b1\'ea\'cd\'bc\'c6\'ac\'b5\'c4\'b4\'f3\'d0\'a1\
+			>scale \'b1\'d8\'d0\'eb\'b6\'af\'cc\'ac\'bb\'f1\'c8\'a1\'c9\'e8\'b1\'b8\'b5\'c4scale\'d7\'f7\'ce\'aa\'c6\'e4\'d6\'b5\
+\
+		\'b5\'f7\'d3\'c3\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'b5\'c4 startWithCompletionHandler: \'bb\'e1\'b4\'d3block\'b2\'ce\'ca\'fd\'c0\'ef\'c4\'c3\'b5\'bd MKMapSnapshot\'b6\'d4\'cf\'f3,\'b4\'d3\'b6\'f8\'bb\'f1\'c8\'a1\'b5\'bd\'cd\'bc\'c6\'ac\
+\
+\
+\
+\
+3D\'ca\'d3\'bd\'c7\
+\'b5\'f7\'d3\'c3MKMapCamera\'b5\'c4\'b7\'bd\'b7\'a8\
+	[MKMapCamera cameraLookingAtCenterCoordinate: fromEyeCoordinate: eyeAltitude:];\
+		>\'b2\'ce\'ca\'fd1 \'d2\'aa\'b9\'db\'b2\'ec\'b5\'c4\'b5\'d8\'b5\'e3\
+		>\'b2\'ce\'ca\'fd2 \'b4\'d3\'c4\'c4\'b8\'f6\'b5\'e3\'c8\'a5\'b9\'db\'b2\'ec  \'b2\'ce\'ca\'fd1\
+		>\'d2\'aa\'b9\'db\'b2\'ec\'b5\'c4\'b5\'d8\'b7\'bd\'d3\'d0\'b6\'e0\'b8\'df\
+	\
+	\'c1\'ed\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'ca\'c7ios9\'d6\'ae\'ba\'f3\'b2\'c5\'bf\'c9\'d2\'d4\'d3\'c3\'b5\'c4\
+		[MKMapCamera cameraLookingAtCenterCoordinate: fromDistance: pitch: heading:];\
+		>\'b2\'ce\'ca\'fd1 \'d2\'aa\'b9\'db\'b2\'ec\'b5\'c4\'b5\'d8\'b5\'e3\
+		>\'b2\'ce\'ca\'fd2 \'be\'e0\'c0\'eb\'d2\'aa\'b9\'db\'b2\'ec\'b5\'e3\'d3\'d0\'b6\'e0\'d4\'b6\
+		>\'b2\'ce\'ca\'fd3\
+\
+\
+\
+\
+\
+\
+\
+\'bb\'e6\'d6\'c6\'b5\'bc\'ba\'bd\
+	\'d4\'ad\'c0\'ed\'ca\'c7\'bb\'f1\'c8\'a1\'ca\'fd\'be\'dd, \'bb\'e6\'d6\'c6\'b5\'bd\'b5\'d8\'cd\'bc\'c9\'cf(\'d4\'da\'b5\'d8\'cd\'bc\'c9\'cf\'cc\'ed\'bc\'d3\'cd\'bc\'b2\'e3)\
+	\
+	> \'d3\'c3\'b7\'b5\'b5\'d8\'c0\'ed\'b1\'e0\'c2\'eb, \'bd\'e2\'ce\'f6\'b3\'f6\'c6\'f0\'b5\'e3\'b5\'c4 bClp \'ba\'cd \'d6\'d5\'b5\'e3\'b5\'c4eClp\
+	\
+	> \'b8\'f9\'be\'dd bClp \'ba\'cd eClp \'b5\'f7\'d3\'c3\'cf\'e0\'b9\'d8\'b5\'c4\'b7\'bd\'b7\'a8\'c8\'a5\'cf\'f1\'c6\'bb\'b9\'fb\'c4\'c3\'b5\'bc\'ba\'bd\'b5\'c4\'ca\'fd\'be\'dd\
+\
+	> \'c4\'c3\'b5\'bd\'ca\'fd\'be\'dd\'ba\'f3\'bd\'e2\'ce\'f6, \'cc\'ed\'bc\'d3\'b8\'b2\'b8\'c7\'b2\'e3\'b5\'bdMapView\'c0\'ef\
+	\
+\
+>\'c7\'eb\'c7\'f3\'ca\'fd\'be\'dd\
+	1 \'b4\'b4\'bd\'a8\'c7\'eb\'c7\'f3\'b6\'d4\'cf\'f3 MKDirectionsRequest* request\
+	\
+	2 \'c9\'e8\'d6\'c3\'c7\'eb\'c7\'f3\'b6\'d4\'cf\'f3\'b5\'c4\'c6\'f0\'b5\'e3\'ba\'cd\'d6\'d5\'b5\'e3, \'d0\'e8\'d2\'aa\'b5\'c4\'ca\'c7MKMapItem, \'d5\'e2\'b8\'f6\'d6\'b5\'d4\'da\'c9\'cf\'c3\'e6\'b5\'f7\'d3\'c3\'cf\'b5\'cd\'b3\'b5\'bc\'ba\'bd\'b5\'c4\'ca\'b1\'ba\'f2\'d2\'bb\'d1\'f9, \'cd\'a8\'b9\'fdclp\'c8\'a5\'b4\'b4\'bd\'a8\
+\
+	3 \'b4\'b4\'bd\'a8\'b5\'bc\'ba\'bd\'b5\'c4\'c8\'dd\'c6\'f7 MKDirections, \'d4\'da\'b3\'f5\'ca\'bc\'bb\'af\'b5\'c4\'ca\'b1\'ba\'f2\'b9\'d8\'c1\'aarequet, \'c8\'bb\'ba\'f3\'b5\'f7\'d3\'c3\'b7\'bd\'b7\'a8\'c4\'c3\'b5\'bd\'c6\'bb\'b9\'fb\'b8\'f8\'b5\'c4\'b5\'bc\'ba\'bd\'ca\'fd\'be\'dd\
+		\'b5\'f7\'d3\'c3 -[MKDirections calculateDirectionsWithCompletionHandler:];\
+\
+\
+	4> \'cd\'a8\'b9\'fdblock\'bd\'e2\'ce\'f6\'ca\'fd\'be\'dd\
+		block\'b5\'c4\'bb\'d8\'b5\'f7\'c0\'ef \'bb\'e1\'b4\'ab\'bb\'d8MKDirectionsResponse\'b6\'d4\'cf\'f3 res\
+		\'cd\'a8\'b9\'fdres \'d5\'d2\'b5\'bd\'c3\'bf\'d2\'bb\'b8\'f6MKRoute\'b6\'d4\'cf\'f3route\
+		route\'d6\'d0\'b0\'fc\'ba\'ac\'c1\'cbMKPolyline\'b6\'d4\'cf\'f3, \'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'be\'cd\'ca\'c7\'d5\'db\'cf\'df\'cd\'bc\'b2\'e3\'b5\'c4\'ca\'fd\'be\'dd\'c4\'a3\'d0\'cd, \'b5\'f7\'d3\'c3self.map addOverlay:MKPloyline, \'d2\'c0\'b4\'ce\'bd\'ab\'c3\'bf\'b8\'f6\'c4\'a3\'d0\'cd\'cc\'ed\'bc\'d3\'bd\'f8\'c8\'a5\
+		\'d7\'ee\'ba\'f3\'d4\'da\'bb\'d8\'b5\'f7\'c0\'ef \'b4\'a6\'c0\'ed\
+\
+\
+}
